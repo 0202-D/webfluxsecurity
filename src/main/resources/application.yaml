@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgres://localhost:5432/webfluxsecuritydb
+    username: postgres
+    password: postgres
+  flyway:
+   url: jdbc:postgresql://localhost:5432/webfluxsecuritydb
+   user: postgres
+   password: postgres
+   schemas: db
+   locations: classpath:db/migration
